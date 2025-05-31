@@ -9,13 +9,13 @@ def lambda_handler(event, context):
         # event["body"] がある場合はそれを JSON へパース
         body = json.loads(event["body"])
     except Exception:
-        # 単体テスト（Lambda コンソールから直接 event={"key1":"..." }）のケース
+        # 単体テスト（Lambda コンソールから直接 event={"message":"..." }）のケース
         body = event
 
     # ──────────────────────────────────────────────────
-    # 2. body から key1 を取得（存在しなければ空文字などを使う）
+    # 2. body から message を取得（存在しなければ空文字などを使う）
     # ──────────────────────────────────────────────────
-    key1_value = body.get("key1", "")
+    message_value = body.get("message", "")
 
     # ──────────────────────────────────────────────────
     # 3. LINE へプッシュするメッセージを組み立て
@@ -23,7 +23,7 @@ def lambda_handler(event, context):
     resmessage = [
         {
             'type': 'text',
-            'text': key1_value
+            'text': message_value
         }
     ]
     payload = {
