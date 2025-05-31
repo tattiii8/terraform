@@ -36,8 +36,8 @@ resource "aws_api_gateway_rest_api" "api" {
       version = "1.0"
     }
     paths = {
-      "/path1" = {
-        get = {
+      "/message" = {
+        post = {
           x-amazon-apigateway-integration = {
             httpMethod           = "POST"
             payloadFormatVersion = "1.0"
