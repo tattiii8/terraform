@@ -1,7 +1,3 @@
-variable "resource_prefix" {}
-variable "runtime" {}
-variable "handler" {}
-
 # IAM Role for Lambda
 resource "aws_iam_role" "lambda_role" {
   name               = "${var.resource_prefix}-lambda-role"
@@ -27,8 +23,8 @@ data "aws_iam_policy_document" "lambda_assume_role" {
 # ZIP Lambda ソースコード
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/api"
-  output_path = "${path.module}/lambda.zip"
+  source_dir  = "${path.root}/api"
+  output_path = "${path.root}/lambda.zip"
 }
 
 # Lambda Function
