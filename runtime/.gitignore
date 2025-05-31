@@ -1,4 +1,4 @@
 .terraform/
 .module/lambda/api.zip
 .api/package/
-.api/lambda.zip
+.api/lambda_build.zip
