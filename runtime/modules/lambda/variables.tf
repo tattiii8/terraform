@@ -11,11 +11,11 @@ variable "source_dir" {
 variable "runtime" {
   description = "Lambda runtime"
   type        = string
-  default     = "nodejs18.x"
+  default     = "python3.11"
 }
 
 variable "handler" {
   description = "Lambda handler"
   type        = string
-  default     = "index.lambda_handler"
+  default     = "lambda_function.lambda_handler"
 }
