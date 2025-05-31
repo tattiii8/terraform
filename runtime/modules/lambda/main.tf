@@ -39,4 +39,13 @@ resource "aws_lambda_function" "api" {
 
   timeout     = 30
   memory_size = 128
+
+  environment {
+    variables = {
+      LINE_CHANNEL_ACCESS_TOKEN = "XXXXXXXX"
+    }
+  }
+
 }
+
+
