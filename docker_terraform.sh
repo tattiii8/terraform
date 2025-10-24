@@ -17,4 +17,4 @@ docker run --rm \
   -it --entrypoint=ash \
   hashicorp/terraform:${TERRAFORM_VERSION} \
 
-  aaabbb
+  aaabbbccc
