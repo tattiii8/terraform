@@ -16,5 +16,3 @@ docker run --rm \
   -e AWS_DEFAULT_REGION="ap-northeast-1" \
   -it --entrypoint=ash \
   hashicorp/terraform:${TERRAFORM_VERSION} \
-
-  aaabbb
