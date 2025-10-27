@@ -17,8 +17,8 @@ locals {
   # リソース制限（必要なら後で調整）
   postgres_cpu    = 500
   postgres_memory = 512
-  redmine_cpu     = 500
-  redmine_memory  = 1024
+  redmine_cpu     = 200
+  redmine_memory  = 512
 }
 
 # PostgreSQL ジョブ

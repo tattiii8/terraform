@@ -3,12 +3,13 @@ job "redmine" {
   type        = "service"
 
   group "redmine" {
-    count = 1
+    count = 3
 
     network {
-      mode = "host"
+      #mode = "bridge"
+      mode = "bridge"
       port "web" {
-        static = 3000
+        to = 3000
       }
     }
 
@@ -23,6 +24,10 @@ job "redmine" {
         interval = "10s"
         timeout  = "2s"
       }
+
+      #connect {
+      #  sidecar_service {}
+      #}
     }
 
     task "redmine" {

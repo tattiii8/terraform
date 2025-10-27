@@ -6,7 +6,7 @@ job "postgres" {
     count = 1
 
     network {
-      mode = "host"
+      mode = "bridge"
       port "db" {
         static = 5432
       }
