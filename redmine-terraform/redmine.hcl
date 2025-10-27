@@ -34,11 +34,11 @@ job "redmine" {
       }
 
       env {
-        REDMINE_DB_POSTGRES = "${db_host}"
-        REDMINE_DB_PORT     = "${db_port}"
-        REDMINE_DB_USERNAME = "${db_username}"
-        REDMINE_DB_PASSWORD = "${db_password}"
-        REDMINE_DB_DATABASE = "${db_name}"
+        REDMINE_DB_POSTGRES = "${redmine_db_postgres}"
+        REDMINE_DB_PORT     = "${redmine_db_port}"
+        REDMINE_DB_USERNAME = "${redmine_db_username}"
+        REDMINE_DB_PASSWORD = "${redmine_db_password}"
+        REDMINE_DB_DATABASE = "${redmine_db_name}"
       }
 
       resources {
