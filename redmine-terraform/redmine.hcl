@@ -23,11 +23,20 @@ job "redmine" {
         path     = "/"
         interval = "10s"
         timeout  = "2s"
+
       }
 
       #connect {
       #  sidecar_service {}
       #}
+ 
+       tags = [
+        "traefik.enable=true",
+        "traefik.http.routers.redmine.rule=Host(`192.168.8.112`)",
+        "traefik.http.services.redmine.loadbalancer.server.port=3000"
+  ]
+
+
     }
 
     task "redmine" {
